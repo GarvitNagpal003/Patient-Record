@@ -1,0 +1,26 @@
+<br>
+<br>
+<div id="edit_form">
+    <form [formGroup]="user_details" (ngSubmit)="table_data(user_details.value)">
+        <label for="patientname">Patient Name</label>
+        <input type="text" placeholder="Enter Patient Name" formControlName="patientname" id="patientname_inp" >
+        
+        <label for="age">Age</label>
+        <input type="number" placeholder="Enter Age" formControlName="age" id="age_inp">
+        <label for="Gender">Gender</label>
+        <input type="text" placeholder="Enter Gender" formControlName="gender" id="gender_inp"> 
+        
+        <label for="disease">Disease</label>
+        <input type="text" placeholder="Enter Disease" formControlName="disease" id="disease_inp">
+        
+        <label for="patient_in_time">Patient In Time</label>
+        <input type="text" formControlName="patient_in_time" placeholder="Enter Patient In Time" id="patient_in_time_inp">
+        
+    
+        <label for="patient_out_time">Patient Out Time</label>
+        <input type="text" formControlName="patient_out_time" placeholder="Enter Patient Out Time" id="patient_out_time_inp">
+        
+    
+        <button mat-flat-button id="form_btn" color="primary" >Submit</button>
+    </form>
+</div>

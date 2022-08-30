@@ -1,0 +1,5 @@
+<app-header></app-header>
+<br>
+<br>
+
+<app-table *ngIf="load_data" [all_Users]="users" (load_data_in_app)="load_data_from_child($event)"></app-table>

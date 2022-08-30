@@ -1,0 +1,29 @@
+<table id="main_table" class="centre">
+    <thead>
+        <th name="patientname">Patient Name</th>
+        <th name="age">Age</th>
+        <th name="gender">Gender</th>
+        <th name="disease">Disease</th>
+        <th name="patient_in_time">Patient In Time</th>
+        <th name="patient_out_time">Patient Out Time</th>
+        <th name="edit">Edit</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of all_Users">
+            
+            <td> {{user.patientname}} </td>
+            <td> {{user.age}} </td>
+            <td> {{user.gender}} </td>
+            <td> {{user.disease}} </td>
+            <td>  {{user.patient_in_time}} </td>
+            <td> {{user.patient_out_time}} </td>
+            <td>
+                <button mat-raised-button color="primary" id="edit_btn" (click)="enable_update(user.patientname)">EDIT</button>
+                <button mat-raised-button color="primary" id="delete_btn" (click)="delete_user(user.patientname)" >DELETE</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button mat-raised-button id="add_row_btn" (click)="enable_form()" color="primary">Add Row</button>
+<app-form *ngIf="add_row" [update_check]="edit_patientname" (parent_function)="parent_function($event)" (load_data_in_app)="load_data_from_form($event)"></app-form>
+<app-edit-form [update_check]="edit_patientname" *ngIf="update_row" (parent_function)="parent_function($event)" (load_data_in_app)="load_data_from_form($event)" ></app-edit-form>

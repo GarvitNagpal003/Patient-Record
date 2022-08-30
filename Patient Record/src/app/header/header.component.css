@@ -1,0 +1,12 @@
+
+.header {
+    text-align: center;
+  }
+  h1 {
+    display: inline-flex;
+    padding: 3px;
+    font-style: bold;
+    font-size: xx-large;
+    background-color: #4451b3;
+    color: #fff;
+  }

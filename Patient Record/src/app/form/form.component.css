@@ -1,0 +1,23 @@
+label{
+    display: block;
+}
+#main_div{
+    
+    width: 15vw;
+    height: 40vh;
+    border-color: black;
+    color: black;
+    padding-top: 1vh;
+    padding-left: 2vw;
+    position: absolute;
+    left: 44vw;
+    margin-top: 2vh;
+    border-radius: 10px;
+
+}
+#form_btn{
+    margin-top: 1vh;
+}
+#update_data{
+    margin-left: 1vw;
+}
